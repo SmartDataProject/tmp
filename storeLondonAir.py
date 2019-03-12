@@ -293,12 +293,12 @@ def main(argv):
     if args is not None and len(args)>=1:
         sourceFile=args[0]
 
-    fiwareAuthBaseURL= None
-    fiwareBaseURL= 'http://localhost:1026/v2/'
-    fiwareService= 'sandboxdata'
+    fiwareAuthBaseURL= '113.196.74.71:5001/v3/auth/tokens'
+    fiwareBaseURL= '113.196.74.71:1027/v2/entities'
+    fiwareService= 'testdata'
     fiwareServicePath= '/LondonAirQuality'
-    fiwareUser= None
-    fiwarePassword= None
+    fiwareUser= 'test_admin'
+    fiwarePassword= '953dcb2c3edc'
 
     for o, a in optlist:
         if o=='--authBaseURL':
@@ -325,5 +325,5 @@ def main(argv):
                      fiwareUser, fiwarePassword, filtered)
 
 if __name__ == "__main__":
-    main(sys.argv[1:])
-    # main(['londonAirQualityData-greenwich-2013-01-01-2013-01-16.csv'])
+    #main(sys.argv[1:])
+     main(['londonAirQualityData-greenwich-2013-01-01-2013-01-16.csv'])
